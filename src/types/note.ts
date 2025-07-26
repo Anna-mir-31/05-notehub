@@ -1,13 +1,10 @@
+export type NoteTag = 'Todo' | 'Work' | 'Personal' | 'Meeting' | 'Shopping';
+
 export interface Note {
-  id: string;
+  id: number; // має бути number!
   title: string;
   content: string;
   tag: NoteTag;
-}
-
-export type NoteTag = 'Todo' | 'Work' | 'Personal' | 'Meeting' | 'Shopping';
-
-export interface NotesResponse {
-  results: Note[];
-  totalPages: number;
+  createdAt: string;
+  updatedAt: string;
 }
